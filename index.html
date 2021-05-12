@@ -1,5 +1,50 @@
+<!DOCTYPE html>
+<html>
+<style>
+.button {
+    height: 50px;
+    line-height: 50px;
+    width: fit-content;
+    box-shadow: 0px 10px green;
+    background-color: greenyellow;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+
+.button:active {
+    position: relative;
+    top: 10px;
+    box-shadow: none;
+}
+  
+.button:hover {
+    cursor:pointer;
+}
+</style>
+<body>
 <h1>Hello, World!</h1>
 <p>
   There's nothing here. You can go now. <br>
   <h6>sorry</h6>
 </p>
+
+<div class="button" onclick="ShowAndHide()">while you're here</div>
+<div id="video" style="display:none">
+  <iframe width="900" height="506" src="https://www.youtube.com/embed/HwcCBnfhsR4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<script>
+function ShowAndHide() {
+    var x = document.getElementById('video');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+
+</body>
+</html>
